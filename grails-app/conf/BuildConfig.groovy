@@ -3,9 +3,7 @@ grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 
 grails.project.dependency.resolution = {
-    // inherit Grails' default dependencies
-    inherits("global") {
-    }
+    inherits("global")
     log "warn"
     legacyResolve false
     repositories {

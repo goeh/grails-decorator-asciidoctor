@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Goran Ehrsson.
+ * Copyright (c) 2014 Goran Ehrsson.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 package grails.plugins.decorator
 
 import grails.test.GroovyPagesTestCase
-import org.junit.Before
 
 class DecoratorTagLibTests extends GroovyPagesTestCase {
 
@@ -37,9 +36,9 @@ class DecoratorTagLibTests extends GroovyPagesTestCase {
         assert list.contains('abbreviateDecorator')
         assert list.contains('telephoneDecorator')
         assert list.contains('urlDecorator')
+        assert list.contains('asciidoctorDecorator')
 
         assert !list.contains('jiraDecorator')
-        assert !list.contains('asciidoctorDecorator')
     }
 
     void testAsciidoctor() {
