@@ -28,7 +28,8 @@ You can use this plugin in your Grails application to allow your users to add As
 Or maybe render dynamic context sensitive help that are maintained in Asciidoctor format.
 
 The source code for this decorator is **very** simple. It uses the [asciidoctor-java-integration](https://github.com/asciidoctor/asciidoctorj) library.
-The plugins also adds a `asciidoctor` bean to the Spring context that you have special requirements.
+
+This plugin also adds an `asciidoctor` bean to the Spring context that you can use directly if have special requirements.
 
     class AsciidoctorDecorator {
 
