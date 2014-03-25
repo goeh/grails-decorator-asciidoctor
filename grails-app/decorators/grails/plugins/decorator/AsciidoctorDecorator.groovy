@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Goran Ehrsson.
+ * Copyright (c) 2014 Goran Ehrsson.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,14 +15,9 @@
  */
 package grails.plugins.decorator
 
-import static org.asciidoctor.Asciidoctor.Factory.create
-import org.asciidoctor.Asciidoctor
-
 class AsciidoctorDecorator {
 
-    def enabled = false
-
-    Asciidoctor asciidoctor = create()
+    def asciidoctor
 
     String decorate(String text, Map params) {
         asciidoctor.render(text, params)
