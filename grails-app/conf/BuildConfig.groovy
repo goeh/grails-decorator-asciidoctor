@@ -14,7 +14,7 @@ grails.project.dependency.resolution = {
         mavenRepo "http://labs.technipelago.se/repo/plugins-releases-local/"
     }
     dependencies {
-        compile "org.asciidoctor:asciidoctor-java-integration:0.1.3"
+        compile "org.asciidoctor:asciidoctor-java-integration:0.1.4"
     }
 
     plugins {
