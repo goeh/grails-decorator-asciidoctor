@@ -1,7 +1,7 @@
 # Asciidoctor Decorator - Grails Plugin
 
 
-This plugin adds Asciidoctor support to the [decorator](https://github.com/goeh/grails-decorate) plugin.
+This plugin adds Asciidoctor support to the [decorator](https://github.com/goeh/grails-decorator) plugin.
 The decorator plugin uses pluggable decorators to modify markup in GSP pages.
 The standard decorator can convert URLs www.mycompany.com to clickable hyperlinks.
 This plugin extends the decorator plugin and adds support for Asciidoctor syntax in parts of GSP pages.
