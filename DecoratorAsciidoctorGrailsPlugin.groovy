@@ -24,10 +24,12 @@ class DecoratorAsciidoctorGrailsPlugin {
     def author = "Goran Ehrsson"
     def authorEmail = "goran@technipelago.se"
     def description = '''\
-Asciidoctor support for the decorator-plugin
+This plugin adds Asciidoctor support to the decorator plugin.
+The decorator plugin uses pluggable decorators to modify markup in GSP pages.
+The standard decorator can convert URLs www.mycompany.com to clickable hyperlinks.
+This plugin extends the decorator plugin and adds support for Asciidoctor syntax in parts of GSP pages.
 '''
-
-    def documentation = "http://grails.org/plugin/decorator-asciidoctor"
+    def documentation = "https://github.com/goeh/grails-decorator-asciidoctor"
     def license = "APACHE"
     def organization = [ name: "Technipelago AB", url: "http://www.technipelago.se/" ]
 
