@@ -3,7 +3,7 @@
 
 This plugin adds Asciidoctor support to the [decorator](https://github.com/goeh/grails-decorator) plugin.
 The decorator plugin uses pluggable decorators to modify markup in GSP pages.
-The standard decorator can convert URLs www.mycompany.com to clickable hyperlinks.
+The standard decorator can convert URLs www.mycompany.com to clickable hyperlinks, telephone numbers to hyperlinks, etc.
 This plugin extends the decorator plugin and adds support for Asciidoctor syntax in parts of GSP pages.
 
 -----
@@ -29,8 +29,6 @@ Or maybe render dynamic context sensitive help that are maintained in Asciidocto
 
 The source code for this decorator is **very** simple. It uses the [asciidoctor-java-integration](https://github.com/asciidoctor/asciidoctorj) library.
 
-This plugin also adds an `asciidoctor` bean to the Spring context that you can use directly if have special requirements.
-
     class AsciidoctorDecorator {
 
         def asciidoctor
@@ -39,6 +37,8 @@ This plugin also adds an `asciidoctor` bean to the Spring context that you can u
             asciidoctor.render(text, params)
         }
     }
+
+This plugin also adds an `asciidoctor` bean to the Spring context that you can use directly if have special requirements.
 
 # See also
 
