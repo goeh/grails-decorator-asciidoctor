@@ -9,7 +9,6 @@ grails.project.dependency.resolution = {
     repositories {
         grailsCentral()
         mavenCentral()
-        mavenRepo "http://labs.technipelago.se/repo/plugins-releases-local/"
     }
     dependencies {
         compile "org.asciidoctor:asciidoctor-java-integration:0.1.4"
