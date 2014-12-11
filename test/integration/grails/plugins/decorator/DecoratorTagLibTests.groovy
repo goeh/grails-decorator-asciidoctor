@@ -42,7 +42,7 @@ class DecoratorTagLibTests extends GroovyPagesTestCase {
     }
 
     void testAsciidoctor() {
-        def result = applyTemplate('<g:decorate include="asciidoctor">The quick brown **fox** jumps over the lazy **dog**.</g:decorate>').trim()
+        def result = applyTemplate('<g:decorate include="asciidoctor">The quick brown *fox* jumps over the lazy *dog*.</g:decorate>').trim()
         assert result == "<div class=\"paragraph\">\n<p>The quick brown <strong>fox</strong> jumps over the lazy <strong>dog</strong>.</p>\n</div>"
     }
 }

@@ -11,7 +11,7 @@ grails.project.dependency.resolution = {
         mavenCentral()
     }
     dependencies {
-        compile "org.asciidoctor:asciidoctor-java-integration:0.1.4"
+        compile "org.asciidoctor:asciidoctorj:1.5.2"
     }
 
     plugins {
@@ -20,6 +20,6 @@ grails.project.dependency.resolution = {
               ":rest-client-builder:1.0.3") {
             export = false
         }
-        compile ":decorator:1.0"
+        compile ":decorator:1.1"
     }
 }
