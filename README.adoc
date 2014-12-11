@@ -1,0 +1,48 @@
+= Asciidoctor Decorator - Grails Plugin
+
+
+This plugin adds Asciidoctor support to the https://github.com/goeh/grails-decorator[decorator] plugin.
+The decorator plugin uses pluggable decorators to modify markup in GSP pages.
+The standard decorator can convert URLs www.mycompany.com to clickable hyperlinks, telephone numbers to hyperlinks, etc.
+This plugin extends the decorator plugin and adds support for Asciidoc syntax in parts of GSP pages.
+
+== Usage Examples
+
+    // The model
+    text = "Asciidoctor is *awesome!*"
+
+    // GSP markup
+    <g:decorate>${text}</g:decorate>
+
+Produces the following HTML:
+
+    <p>Asciidoctor is <strong>awesome!</strong></p>
+
+which renders:
+
+Asciidoctor is *awesome!*
+
+You can use this plugin in your Grails application to allow your users to add Asciidoc syntax to user profiles, comments, etc.
+Or maybe render dynamic context sensitive help that are maintained in Asciidoc format.
+
+The source code for this decorator is *very* simple. It uses the https://github.com/asciidoctor/asciidoctorj[AsciidoctorJ] library.
+
+    class AsciidoctorDecorator {
+
+        def asciidoctor
+
+        String decorate(String text, Map params) {
+            asciidoctor.render(text, params)
+        }
+    }
+
+This plugin also adds an `asciidoctor` bean to the Spring context that you can use directly if have special requirements.
+
+== See also
+
+=== Markdown decorator
+The https://github.com/goeh/grails-decorator-markdown[Markdown Decorator] plugin is an example of an extension plugin that adds Markdown syntax support.
+
+== Changes
+0.4:: Upgraded to AsciidoctorJ 1.5.2
+0.3:: First public release
